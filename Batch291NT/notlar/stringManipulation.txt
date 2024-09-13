@@ -1,0 +1,26 @@
+STRING MANIPILATION
+
+//String Data Tipi (Class)
+//String data tipi, cumleler, kelimeler, semboller, rakamlar icerebilir.
+
+//length() methodu String'in uzunlugunu dondurur.1’den baslar
+
+//charAt(int index) metodu, belirtilen index’te yer alan karakteri döndürmek için kullanılır.
+//Indeks 0 tabanlıdır, yani ilk karakterin indeksi 0'dır, ikinci karakterin indeksi 1, ve böyle devam eder.
+//Java'da indexleme, genellikle diziler (arrays), dizeler (Strings) veya koleksiyonlar (collections)
+// gibi bir veri yapısındaki belirli bir elemana erişmek için kullanılan bir tekniktir.
+
+//Not: s.length()-1 her zaman son index'i verir
+
+//substring(int beginIndex, int endIndex): Belirtilen indeks aralığındaki substring'i döndürür.
+//substring(0, 4) ==> "0" yani ilk index dahil, "4" yani ikinci index haric dir. [0,4)
+
+//2.kullanimi: substring(int beginIndex): Belirtilen indeksten başlayarak sonuna
+// kadar olan substring'i döndürür.
+
+//contains() method’u herhangi bir karakterin veya karakterlerin String'de
+// var olup olmadigini kontrol eder.
+//contains() methodu true veya false return eder. boolean
+
+//startsWith() methodu bir Strig’in ilk karakterini/karakterlerini kontrol eder
+startsWith() methodu boolean return eder.

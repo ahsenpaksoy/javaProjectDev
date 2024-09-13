@@ -1,0 +1,181 @@
+VARIABLES , PRIMITIVE NONPRIMITIVE , WRAPPER CLASS , OPERATORS , TYPE CASTING \ SCANNER
+
+//Java bu satiri okumaz. Kendimize veya baskasina aciklamadir
+
+        /*
+        1) Java dili Strongly Typed’dir, bu nedenle Java’daki her değişken(variable), belirli
+        veri türü(data type) ile iliskilendirilmelidir.
+        2) Kod yazanin değişkenlere uygun değerlerin atandığından emin olması her zaman gerekir.
+        Aksi takdirde hata oluşur.
+
+         /*Java Primitive Data Types:
+        Not 1 : primitive data type’larini Java olusturmustur, biz olusturamayiz
+        Not 2 : primitive data type’larinin isimlerinde sadece kucuk harf kullanilir
+        Not 3 : primitive datalar, data type’larina gore memory’de farkli farkli yer kaplarlar
+        Not 4 : primitive datalar, iclerinde sadece sizin atadiginiz degeri barindirirlar*/
+
+        //--------------------------
+        //1- byte data type:
+        //tam sayilar icindir. Hafizada 1 byte(8 bit) yer kaplar
+        //-128 den + 127’e tamsayi degerleri icin kullanilir
+
+        //2- short data type:
+        //Tam sayilar icindir. Hafizada 2 byte(16 bit) yer kaplar. Aralik (range) genisledi.
+        //-32768 den + 32767’e tamsayi degerleri icin kullanilir
+
+        //3- int data type:
+        //tam sayilar icindir. Hafizada 4 byte (32 bit) yer kaplar
+        //-2,147,483,648 ile 2,147,483,647’e tamsayi degerleri icin kullanilir
+
+        //4- long data type:
+        //Tam sayilar icindir. Hafizada 8 byte (64 bit) yer kaplar
+        //-9,223,372,036,854,775,808 ile 9,223,372,036,854,775,807 arasindaki sayilar icindir.(kentilyon)
+        //Not: Long olustururken eger deger, Integer’larin maximum degerinden buyuk ise
+        //sonuna “L” koymak zorundasiniz, yoksa “Integer number too large - Tam sayı çok büyük hatasi alirsiniz.
+
+        //5- float data type: Hafizada 32 bit - 4 byte yer kaplar
+        //(Decimal Numbers ==> ondalikli sayilar) icin kullanilir.
+        //Ozellikle fiyat degerleri icin "float" kullanilir. App'inizde bu data tipini secmelisiniz.
+        //Dikkat :Java ondalikli sayilari otomatik olarak double kabul eder.
+        // (trigonometrik işlemler, logaritmalar vb.) çok hassas sonuçlar gerektiğinde,
+        // double'ın daha yüksek hassasiyeti faydalı olabilir. O yuzden default double dir.
+        //float olmasina israr ediyorsaniz sonuna "F" veya "f" koymalisiniz
+
+        //6- double data type :
+        //double memory de 8 byte (64 bit) yer kaplar, ondalikli kisim icin daha fazla rakam alir.
+        // Ondalikli sayilar icin kullanilir. Daha hassas hesaplamalar icin kullanilir.
+        //Ornek 1: Hucre agirligi icin bir variable olusturup console’a yazdiriniz.
+        //Example 1: Create a variable for cell weight and print it to the console
+
+         //7- char 2 byte'tir (16 bit). Tek karakterler icin kullanilir.
+        // Sayi, sembol, harf farketmez. Data tek tirnak icine yazilir.
+        // SD seklinde iki karakter koyamazsiniz.
+        // Ornegin 'A', 'x', '?', '5' koyabilirsiniz.
+
+         //8- Boolean Data Type: Sadece true (dogru) ve false (yanlis) olmak uzere 2 farkli deger alirlar.
+
+         // code-reformat code (ctrl alt L)  satırları duzeltir aynı hizaya getirir.
+        // code- comment with lıne comment coklu yorum satırı yapar
+
+
+         Non-primitive Data types:
+        Ornegin String class non-primitive bir data type'dir.
+
+        Not 1: Uretilen her bir class ayni zamanda bir "non-primitive" data type dir.
+         Bu yuzden "non-primitive" data type'lar sinirsiz sayidadir denilebilir.
+        Not 2: Non-primitive data type'larin isimleri buyuk harf ile baslar
+        Not 3: Non-primitive'ler icin Java memory'de buyuklugune gore degisen boyutlarda yer ayirir
+       //String Data Tipi (Class): String data tipi, cumleler, kelimeler, semboller, rakamlar icerebilir.
+
+       Soru: primitive ve non-primitive data type'lari arasindaki farklar nelerdir? (İnterview sorusu)
+
+        1) "primitive" ler sadece bizim atadigimiz degeri icerir
+            "non-primitive" ler bizim atadigimiz degeri ve methodlari icerir
+        2) "primitive" ler kucuk harfle baslar, "non-primitive" ler buyuk harfle baslar
+        3) "primitive" leri Java uretmistir ve 8 tanedir
+           "non-primitive" leri Java ve kod yazanlar uretebilir, sinirsiz sayidadir.
+        4) "primitive" ler memory'de data type'larina gore sabit boyutta bellek kullanir
+           "non-primitive" ler icin Java memory'de buyuklugune gore degisen boyutlarda bellek kullanabilir
+
+           //Java da "+" sembolu iki sayi arasinda kullanilirsa "toplama islemi" olur
+        //Java da "+" sembolu iki String veya bir String ve bir sayi arasinda kullanilirsa "concatenation" islemi olur
+        //"concatenation" islemi birlestirme yapar
+        //Not: Concatenation islemlerinde Java matematikteki islem onceligini kullanir
+
+         /*Java primitive data tiplerine yeni ozellikler(methodlar) ekleyerek yeni bir yapi olusturdu.
+        Bu yapiya wrapper class denir. Wrapper class'lar, Java'nın primitive veri türlerini object olarak
+        temsil etmek için kullandığı class'lardir. Bu özellik, primitive veri türlerini koleksiyonlarda
+        (örneğin ArrayList gibi) kullanabilmek için oldukça kullanışlıdır, çünkü Java'da koleksiyonlar
+        sadece Object referans türlerini kabul eder. Ayrica en onemlisi girdigimiz veriler uzerinde
+        method kullaniminin da yolunu acar.*/
+
+        //Wrapper'lar buyuk harfle baslarlar cunku class'tirlar
+        // primitive     : char     - boolean - byte - short - int     - long - float - double
+        //wrapper class       : Character     -Boolean  - Byte - Short -Integer      - Long  -Float   - Double
+
+         //Autoboxing - Unboxing
+        /*Java'da primitive(ilkel) türler ve wrapper sınıfları arasında otomatik dönüşüm yapabilen
+        autoboxing ve unboxing mekanizmaları vardır. Autoboxing, primitive bir türü otomatik olarak onun
+        wrapper sınıfına çevirir. Örneğin, long'u Long'a dönüştürür. Unboxing ise tam tersi bir işlem yapar,
+        Long'u long'a dönüştürür. Ikisi de otomatik gerceklesir.*/
+
+        // primitivler null kullanmazlar
+
+        /*
+        +,-,*,/ islemleri Java'da matematikte kullanildigi gibi kullanilir
+        Not 1: Java'da bir tamsayiyi baska bir tamsayiya bolerseniz sonuc her zaman tamsayi olur
+        Not 2: Eger sonuc tamsayi degilse Java sonucun ondalik kismini silerek onu int'e donusturur.
+        Not 3: Bir matematiksel islemde farkli data tiplerini kullanirsaniz sonuc her zaman buyuk data tipinde olur.
+        */
+
+        /*2) Java da "logical operator" lar.
+           ==> AND (&&) isleminden true alabilmek icin her sey true olmalidir
+           AND islemini carpma olarak dusunebiliriz
+
+           ==> OR(||) isleminde bir tane true sonucu true yapmaya yeterlidir
+           OR isleminde sonucun false olabilmesi icin hersey false olmalidir
+
+           //==> NOT Operatoru (!) true olani false , false olani true yapar
+           !true  ==> false
+           !false ==> true
+           !!true ==> true*/
+
+        /*3) Comparison (Karsilastirma) Operators
+       <, >, <=, >=, ==, !=
+       Not: Karsilastirma operatorlerini kullandiginizda sonuc kesinlikle boolean (true, false) alirsiniz*/
+
+       /*Sayisal primitive data tiplerinin birbirine donusturulmesine Type Casting denir
+        Numeric (sayisal) Data Type ==> byte - short - int - long - float - double */
+
+        /*Not 1: Kucuk data type'larini buyuk data type'larina cevirmeyi Java otomatik olarak yapabilir.
+        Bu isleme "AutoWidening" (Otomatik genisletme) denir*/
+
+        /*Not 2: Buyuk data type'larini kucuk data type'larina cevirmek riskli bir istir. Veri kaybi olusabilir.
+        Java bu isi otomatik olarak yapmaz. Bu islemi kod yazanlar yapar.
+        Bu isleme "Explicit Narrowing"(Aciktan Daraltma)denir.*/
+
+        SCANNER
+
+        /*Java'da Scanner class'i, kullanıcıdan veya farklı bir kaynaktan girdi almanın oldukça kolay bir yolunu sağlar.
+
+        1- Scanner class'i, farklı veri tiplerini (int, float, double, String, boolean vb.) kolaylıkla okuyabilir.
+        2- Tek bir Scanner objesi, aynı girdi kaynağından farklı türlerde veri okuyabilir.
+        3- next(), nextInt(), nextDouble() gibi farklı metotlar, farklı ihtiyaçlara uygun şekillerde kullanicidan girdi almayı sağlar.*/
+
+        /*Java'da kütüphane, belirli bir işlevselliği sağlayan class'lar, interface'ler ve metotlar koleksiyonudur.
+        Bu kütüphaneler, Java geliştiricilerinin daha hızlı ve etkili bir şekilde programlama
+        yapabilmelerine olanak tanır. Java kütüphaneleri genellikle .jar (Java Archive) dosyaları olarak dağıtılır.
+        Java'nın standart kütüphanesi (Java Standard Library), Java Development Kit (JDK) ile birlikte gelir
+        ve dilin temel yapısını oluşturur. Java'da bir kütüphaneyi kullanabilmek için import anahtar kelimesi
+        ile belirtilen class'lari projenize eklemeniz gerekir.*/
+
+        //equals() iki String'in birbirinin aynisi olup olmadigini kontrol eder.
+        //Bu method boolean return eder(true veya false).
+
+        //equalsIgnoreCase() iki String'in birbirinin aynisi olup olmadigini
+        //buyuk kucuk harfi dikkate almadan kontrol eder
+
+        //“switch” Statement
+
+        //switch ifadesi, farklı koşullara dayalı olarak farklı eylemler gerçekleştirmek için kullanılır.
+        //if -else if'in yaptigini yapar. Okumasi ve yazmasi daha kolaydir.
+        //genel kullanimda, 3'ten fazla durum varsa switch kullaniriz.(best practise)
+
+        /*Not : switch condition parantezi icine 1) String 2) int 3) byte 4) short 5) char kullanabilirsiniz
+           switch condition parantezi icine 1) long 2) boolean 3) float 4) double kullanilmaz */
+
+        /*Yeni switch ifadesi, daha esnek ve güçlü bir yapı sunarak, geleneksel switch-case
+        yapısının daha temiz ve ifade edilebilir hale getirilmesini sağlar.
+
+        Ayrıca, daha önceki switch yapısı değer döndürmezken, yeni switch ifadesi bir değer döndürebilir
+         ve bu değer doğrudan bir değişkene atanabilir.
+
+        Yeni switch ifadesinin ana özellikleri:
+
+        Case değerleri: Birden fazla case ifadesini tek bir işlemle birleştirme imkanı.
+        Arrow (->) Operatörü: Geleneksel break yerine kullanılarak, kodun daha okunabilir olmasını sağlar.*/
+
+
+
+
+
