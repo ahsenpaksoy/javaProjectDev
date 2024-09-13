@@ -10,6 +10,8 @@ public class StringManipulations04 {
         //Example 1: Find the total price of the following products.
         //String tv = "$456.99"; String laptop = "$875.99"; ==> 456.99 + 875.99 = 1332.98
 
+        //valueOf() : Belirtilen String’i Double’a cevirir
+
         String tv = "$456.99";
         String laptop = "$875.99";
 
