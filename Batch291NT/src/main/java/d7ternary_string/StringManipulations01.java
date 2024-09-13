@@ -87,6 +87,16 @@ public class StringManipulations01 {
         //startsWith() methodu bir Strig’in ilk karakterini/karakterlerini kontrol eder
         //startsWith() methodu boolean return eder.
 
+        boolean isStart = s.startsWith("Java");
+        System.out.println(isStart);
+
+        //Ornek 8: “s” String’inin “easy” ile bitip bitmedigini kontrol ediniz.
+        //Example 8: Check if the string “s” ends with “easy”.
+        //endsWith() methodu bir Strig’in son karakterini/karakterlerini kontrol eder
+        //endsWith() methodu boolean return eder.
+
+        boolean isEnd = s.endsWith("easy");
+        System.out.println(isEnd);
 
     }
 
