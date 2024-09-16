@@ -40,6 +40,12 @@ public class StringManipulations04 {
 
         System.out.println("" + first + last); //AC
 
+        //  //\\s+ ifadesi, bir veya daha fazla ardışık boşluk karakterini ifade eder.
+        //  char last = name.trim().toUpperCase().split("\\s+")[1].charAt(0);
+        //        System.out.println(last); //C
+
+        // Kelimeler arasinda bırden fazla space oldugunda yukarıdaki gibi yapılır
+
     }
 
 }
