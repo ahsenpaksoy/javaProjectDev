@@ -29,6 +29,7 @@ public class StringManipulations04 {
         sadece referanslar aracılığıyla erişilir.
         */
 
+
         String s = "Tom";
         int a = 12;
 
@@ -41,6 +42,7 @@ public class StringManipulations04 {
         equals() methodu ise iki String’i karsilastirirken sadece degerlerine bakar,
         degerleri ayni ise bu iki String esittir der, degerler farkli ise bu iki String farklidir der
          */
+
         //String str1 = "merhaba";
         //String str5 = "merhaba";
         String str1 = new String("Merhaba");

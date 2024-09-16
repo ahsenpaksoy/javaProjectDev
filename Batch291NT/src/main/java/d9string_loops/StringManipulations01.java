@@ -11,7 +11,7 @@ public class StringManipulations01 {
 
         //1.yol: Hard Coding, tavsiye edilmez
 
-        String a = "abcde@gmail.com";
+        String a = "abc@gmail.com";
         System.out.println(a.substring(4,9)); //gmail
 
         //2.yol: Dinamik

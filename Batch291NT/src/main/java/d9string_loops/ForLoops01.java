@@ -14,6 +14,7 @@ public class ForLoops01 {
         3. do-while-loop
         4. for-each-loop (Collections’larda)*/
         //-------------------
+
         /*1. for-loop
 
         for döngüsü, temel olarak bir kod blogunu belirli bir sayıda ve üst üste çalıştırmak
@@ -40,6 +41,20 @@ public class ForLoops01 {
         }
 */
 
+        //Artirma ==> Increment, Azaltma ==> Decrement
+        // Baslangic Degeri; Loop Calisma Kurali; Artirma/Eksiltme
+
+        for (int i = 1     ;  i < 5             ;   i++) {
+            System.out.println("Hi...");
+        }
+
+
 
     }
 }
+
+
+
+
+
+
