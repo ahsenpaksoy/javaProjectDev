@@ -24,3 +24,5 @@ public class C04_stringManipulation {
 
     }
 }
+
+// alt tusuna bas asagı dogru cek yada mouse un orta kısmına bas asagı cek
