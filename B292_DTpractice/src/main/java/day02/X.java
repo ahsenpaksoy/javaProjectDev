@@ -29,5 +29,26 @@ public class X {
            }
        }
 
-   }
+       System.out.println("100 den kucuk pozitif bir tamsayi girin");
+       byte sayi = input.nextByte();
+
+       if (sayi<0 || sayi>100){
+           System.out.println("Lütfen 100'den kucuk bir pozitif tam sayi giriniz");
+       }else {
+           for (int i = 3; i < sayi; i+=3) {//i=i+3;
+               System.out.print(i + " ");
+           }
+       }
+
+
+    }
 }
+
+
+
+
+
+
+
+
+
