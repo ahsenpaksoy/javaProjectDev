@@ -16,6 +16,9 @@ public class WhileLoops01 {
                         artirma/azaltma
                 }*/
 
+// Dongu sayisi netse for kullanilir. Kosul belirsizse nerde duracagi belli degilse while kullanilir
+
+
         //Ornek 1: 3'den 6'ya kadar tamsayilari console'a yazdiriniz (3 ve 6 dahil).
         //Example 1: Write integers from 3 to 6 to console (including 3 and 6)
 
