@@ -28,7 +28,7 @@ public class ForLoops01 {
         for (int i = 0;    i < t.length();                  i++) {
             char ch = t.charAt(i); //index verdik, bize harfi verecek
 
-            if (t.indexOf(ch) == t.lastIndexOf(ch)) {
+            if (t.indexOf(ch) == t.lastIndexOf(ch)) {   //esitse tekrarsizdir
                 unique = unique + ch;
             }
 
