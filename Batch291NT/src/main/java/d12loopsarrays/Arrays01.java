@@ -51,7 +51,7 @@ public class Arrays01 {
         names[0] = "Ali Can";
         names[2] = "Veli Han";
         names[1] = "Ayse Hanim";
-        //names[3] = "Hasan Kaya"; //HATA, 3.index yok
+        //names[3] = "Hasan Kaya"; //HATA, 3.index yok , olmayan index
 
         System.out.println(Arrays.toString(names));
 
@@ -80,7 +80,7 @@ public class Arrays01 {
 
         int totalChar = 0;
 
-        for (int i = 0; i < cities.length; i++) { //length field'dir method degildir
+        for (int i = 0; i < cities.length; i++) { //length field'dir method degildir. //Arraylerdeki length method degildir. Field'dir yani alan okumasi yapar
 
             totalChar = totalChar + cities[i].length(); //length() methoddur
 
