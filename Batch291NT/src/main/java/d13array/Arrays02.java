@@ -24,7 +24,7 @@ public class Arrays02 {
 
         //1.yol:
 
-/*        Arrays.sort(ages);
+/*        Arrays.sort(ages);  // sort() methodu kucukten buyuge siralar
         System.out.println(Arrays.toString(ages)); //[15, 19, 20, 23, 32, 44]
 
         System.out.println(ages[0] + ages[ages.length - 1]); //59*/
