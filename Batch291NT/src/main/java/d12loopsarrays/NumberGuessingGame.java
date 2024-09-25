@@ -18,7 +18,7 @@ public class NumberGuessingGame {
         int denemeSayisi = 0;
 
         //Kullanicinin yaptigi tahmini saklamak icin bir degisken olusturalim.
-        int tahminEdilen; //int tahminEdilen = ""; calisir miydi?
+        int tahminEdilen; // Baslangic degerini birazdan kullanici girecek.   int tahminEdilen = ""; calisir miydi?
 
         //Kullanicinin sayiyi dogru tahmin edip etmedigini kontrol etmek icin bir
         //boolean degisken olusturalim
@@ -47,7 +47,7 @@ public class NumberGuessingGame {
             }
 
         } while (!tahminDogrumu); //Dongu dogru tahmin yapincaya kadar devam edecek
-        scanner.close(); //Random'da kapatiliyor mu?
+        scanner.close(); //Random'da kapatiliyor mu? //random objesini kapatmak gerekir mi?
 
         //ODEV: 20(dahil) ile 100(dahil) arasında random sayi isteseydik?
 
