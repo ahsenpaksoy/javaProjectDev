@@ -7,7 +7,7 @@ public class C01_StringManipulation {
         String str="Java her zaman guzeldir";
         String bosStr="";
         for (int i = 0; i < str.length(); i++) {
-            if (str.indexOf(str.charAt(i))==str.lastIndexOf(str.charAt(i))||str.charAt(i)==' '){
+            if (str.indexOf(str.charAt(i))==str.lastIndexOf(str.charAt(i))){  //  if (str.indexOf(str.charAt(i))==str.lastIndexOf(str.charAt(i))||str.charAt(i)==' '){
                 bosStr+=str.charAt(i);//bosStr=bosStr+j;
             }
         }
