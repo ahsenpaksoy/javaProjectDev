@@ -21,12 +21,17 @@ public class C03_stringManipulation {
         String email=input.nextLine();
         System.out.println(email);
 
+        //4. adım
         if (!email.contains("@gmail.com")){
-            System.out.println("Lutfen gmail adresi giriniz :)");
-        } else if (email.endsWith("@gmail.com")) {
+            System.out.println("Lutfen gmail adresi giriniz");
+        }else if (email.contains(" ")) {
+            System.out.println("email bosluk karakteri iceremez");
+        }else if (email.split("@")[0].length()==0){
+            System.out.println("Lütfen yazımı kontrol ediniz");
+        }else if (email.endsWith("@gmail.com")){
             System.out.println("Email adresiniz kaydedildi");
         }else {
-            System.out.println("lutfen yazimi kontol edin!");
+            System.out.println("lütfen yazimi kontrol ediniz");
         }
     }
 }
