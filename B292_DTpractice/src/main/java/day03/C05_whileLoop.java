@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class C05_whileLoop {
     public static void main(String[] args) {
+
+        /*
+        ternary-> kaç defa donecegi belli mi ? for : (en az bir kere calismasi gerekli mi ? do-while : while);
+          */
+
         // kullanicidan toplamak istedigi sayilari alin
         // ve kullanici 0'a basincaya kadar devam edin
         // kullanici 0'a bastiginda
