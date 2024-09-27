@@ -9,7 +9,27 @@ public class C04_forloop {
         * * . . .
         * . . . .
         . . . . .
-        */
+        *
+
+// The main method must be in a class named "Main".
+            class Main {
+                public static void main(String[] args) {
+
+            for (int j=1;j<=5 ;j++ ) {
+
+                        for (int i=1;i<=5-j ;i++ ) {
+                        System.out.print("* ");
+                    }
+                            for (int k=1;k<=j ;k++ ) {
+                        System.out.print(". ");
+                    }
+                System.out.println("");
+
+            }
+
+                }
+            }
+                    */
 
         int satir=10;
         for (int bulunSatir = 1; bulunSatir <=satir ; bulunSatir++) {
