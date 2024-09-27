@@ -23,6 +23,8 @@ public class Md02 {
         //2.adim: Tek boyutlu Array'i, iki boyutlu Array'in eleman sayisini kullanarak olusturalim
         int[] newArr = new int[totalNumberOfElement];
         System.out.println(Arrays.toString(newArr)); //[0, 0, 0, 0, 0]
+
+
         //-----------------------
         //3.adim: Iki boyutlu Array'deki elemanlari tek boyutlu Array'e transfer edelim
         int idx = 0;
