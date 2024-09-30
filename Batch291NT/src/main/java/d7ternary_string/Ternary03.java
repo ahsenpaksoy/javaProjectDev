@@ -22,8 +22,7 @@ public class Ternary03 {
                 ((year % 4 == 0) ? ("Leap Year") : ("Leap Year Degil"));
 
         System.out.println(result);
-
-
+        
     }
 
 }
