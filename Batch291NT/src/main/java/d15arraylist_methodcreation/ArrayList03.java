@@ -18,8 +18,8 @@ public class ArrayList03 {
         nums.add(19);
         System.out.println(nums); //[12, 23, 10, 19]
 
-        //Collections.sort(nums); //1 - Diger koleksiyonlarla da kullanilir
-        nums.sort(null); //2 -ArrayList'lerle kullanilir
+        //Collections.sort(nums); //1 - Diger koleksiyonlarla da kullanilir.  Collections yardımcı class i kullandik
+        nums.sort(null); //2 -ArrayList'lerle kullanilir. sort() yapmak icin 2. yol ArrayList icindekini kullanmak
 
         System.out.println(nums); //[10, 12, 19, 23]
 
@@ -27,7 +27,7 @@ public class ArrayList03 {
 
         //----------------------
         //[10, 12, 19, 23]
-        for (int i = 1; i < nums.size(); i++) {
+        for (int i = 1; i < nums.size(); i++) {  //1.index'ten baslattik ki, 1.den 0.yi cikaralim
             minDiff = Math.min(minDiff, nums.get(i) - nums.get(i - 1));
         }
         System.out.println(minDiff); //2, minimum farki bulduk. Bu farki hangi iki sayidan

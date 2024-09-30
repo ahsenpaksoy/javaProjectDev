@@ -15,6 +15,7 @@ public class Mean {
 
         System.out.println((double)5/3);
 
+
     }
 
 }
