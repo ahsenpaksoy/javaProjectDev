@@ -42,6 +42,9 @@ public class DoWhileLoops02 {
                 System.out.println("Hesabiniza hosgeldiniz..");
                 break;
             }
+
+            System.out.println("Kalan hakkınız: " + (3-counter));// ODEV SATIRI
+
             counter++;
 
         } while (true); //sonsuz dongu olusturduk, icerden kirilmadigi surece calisacak
