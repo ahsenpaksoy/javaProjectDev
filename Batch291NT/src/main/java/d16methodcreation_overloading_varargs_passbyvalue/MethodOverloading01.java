@@ -19,10 +19,10 @@ public class MethodOverloading01 {
         add(3, 5);
         //-----------------
         String s = "Java";
-        //s.substring() => Bu methodu bir String objesi uzerinden cagiririz. Boyle metotlara
+        //s.substring() => Bu methodu bir String objesi uzerinden cagiririz. Boyle metotlara (substring)
         //non-static denir
 
-        //Math.min() ==> Bu methodu direkt class adiyla cagirdik. Boyle metotlara static denir
+        //Math.min() ==> Bu methodu direkt class adiyla cagirdik. Boyle (min) metotlara static denir
 
 
     } //main disi

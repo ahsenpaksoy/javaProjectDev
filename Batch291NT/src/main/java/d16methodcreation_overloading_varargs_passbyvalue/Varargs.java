@@ -19,7 +19,7 @@ public class Varargs {
     }*/
 
     public static int add(int... a) { //3 nokta koydugunuzda Java bunu varargs kabul eder
-
+                                      // coklu veri girilebilir. 0 tane veri de kabul eder
         int sum = 0;
 
         //3,7,10
