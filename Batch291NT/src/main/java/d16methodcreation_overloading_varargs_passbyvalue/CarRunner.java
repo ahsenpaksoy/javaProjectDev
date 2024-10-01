@@ -15,6 +15,8 @@ public class CarRunner {
         c1.action(); //Honda hizli hareket eder
         c1.stop(); //Honda guvenli bir sekilde durur
 
+        // Baska bilgi kismi constructor la yapilir
+
         //5- Car class'a donup, constructor olusturalim
 
     }

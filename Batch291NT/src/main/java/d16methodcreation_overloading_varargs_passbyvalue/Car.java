@@ -13,6 +13,8 @@ public class Car {
         3- Gercek projelerde genelde bircok class olur ve sadece 1 tane main method’lu class olur.
     Adina da “runner” eklenir.*/
 
+    // Class lar objelerin kalibidir. Claslar icinde variable ve method lar bulunur. Object ler class lardan olusturulur.
+
     //--------------------
     //1-variable'lar olusturalim (pasif ozellikler)
 
@@ -33,10 +35,13 @@ public class Car {
     //3-CarRunner yani main'li class'i olusturalim
 
     /*6-Constructor nedir?
+
     Class’tan object olusturmamizi saglayan bolumdur.
     Class olusturdugumuzda Java bize otomatik olarak bir constructor verir.
     Bu constructor’lara “default constructor” denir.
     default constructor ===> Car () */
+
+   // Constructor object olusturmak icin yapipilir
 
     /*7- Constructor nasil olusturulur?
     Access Modifier + Class ismi + () + {}
