@@ -47,5 +47,13 @@ public class ArrayList02 {
         System.out.println(r);
         //ODEV: Bu soruyu i’yi son index’ten baslatarak ta cozebilirdik.i-- yazmaya gerek kalmazdi. Nasil?
 
+        for (int i = r.size()-1; i > -1; i--) {
+
+            if (r.get(i).contains("a")) {
+                r.remove(i);
+            }
+        }
+        System.out.println(r);   //[Niğde]
+
     }
 }
