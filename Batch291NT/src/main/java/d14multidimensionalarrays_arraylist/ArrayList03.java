@@ -1,5 +1,8 @@
 package d14multidimensionalarrays_arraylist;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ArrayList03 {
     public static void main(String[] args) {
 
@@ -14,7 +17,31 @@ public class ArrayList03 {
         //List tipinde bir değişken tanımladığınızda, bu değişkenin farklı List implementasyonlarını
         // (örneğin ArrayList, LinkedList, Vector vb.) tutabilmesi mümkündür.
 
+        List<Character> a = new ArrayList<>();
+        a.add('J');
+        a.add('a');
+        a.add('v');
+        a.add('a');
+        a.add('v');
+
+        List<Character> b = new ArrayList<>();
+
+        for (Character w : a){
+            if (!b.contains(w)){
+                b.add(w);
+            }
+        }
+        System.out.println(b);
+
+
+
 
 
     }
 }
+
+
+
+
+
+
