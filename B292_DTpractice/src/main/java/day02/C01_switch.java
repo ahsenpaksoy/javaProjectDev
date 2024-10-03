@@ -7,60 +7,84 @@ public class C01_switch {
         //Toplama, Çıkarma, Çarpma, Bölme , kalan Hesaplama ve us alma
         // 2 sayi işlem yapan basit bir Hesap Makinesi oluşturun:
 
-        //1. adım
+        //1.adım
         Scanner input=new Scanner(System.in);
 
+        //2. adım
+        System.out.println("Lütfen işlem yapmak istediginiz operatoru giriniz : " +
+                "\ntoplamak icin : +" +//++
+                "\ncıkarmak icin : -" +
+                "\nbolmek icin : /" +
+                "\ncarpmak icin : *" +
+                "\nmodulus icin : %" +
+                "\nus almak icin : ^"+
+                "\nfaktoriyel hesabi icin : !");
 
-        //2.adım normal koşullarda kullanıcıya bilgi verirdik
-        System.out.println("Lütfen işlem yapmak istediğiniz operatoru giriniz : \ntoplama icin : +\ncıkarma icin : -\ncarpma icin : *\nbolme icin : /\nus almak icin : ^\nkalan hesaplama icin : %");
-
-
-        //3.adım uygun bir variable'a atamak
-
+        //3. adım uygun bir variable'a atamak
         char operator=input.next().charAt(0);
 
+        //4.adım olarak ne yapıcaz? // kontrol yapıcaz fakat neden
         switch (operator){
+            case '!':
+                //2.adım
+                System.out.println("Lütfen 10'dan kucuk bir tam sayi giriniz");
+                //3.adım
+                byte sayi= input.nextByte();
+                //4.adım nedir?
+                int carpim=1;
+                if (sayi<0||sayi>10){
+                    System.out.println("lütfen gecerli bir sayi giriniz");
+                }else {
+                    for (int i = sayi; i >1 ; i--) {
+                        carpim*=i;
+                        System.out.println(carpim);
+                    }
+                }
+                break;
             case '+':
-                System.out.println("Lütfen toplamak istediginiz sayilari sırasıyla giriniz : ");
-                System.out.println("sayıların toplamı : "+(input.nextDouble()+ input.nextDouble()));
+                System.out.println("Lütfen toplamak istediginiz 2 sayiyi giriniz");
+                System.out.println("sayiların toplami : "+(input.nextDouble()+ input.nextDouble()));
                 break;
             case '-':
-                System.out.println("Lütfen cıkarmak istediginiz sayilari sırasıyla giriniz : ");
-                System.out.println("sayıların farkı : "+(input.nextDouble()- input.nextDouble()));
+                System.out.println("Lütfen farkını almak istediginiz 2 sayiyi giriniz");
+                System.out.println("Sayiların farki : "+(input.nextDouble()- input.nextDouble()));
                 break;
             case '*':
-                System.out.println("Lütfen carpmak istediginiz sayilari sırasıyla giriniz : ");
-                System.out.println("sayıların carpımı : "+input.nextDouble()* input.nextDouble());
+                System.out.println("Lütfen çarpmak istediginiz 2 sayiyi giriniz");
+                System.out.println("Sayiların carpimi : "+input.nextDouble()* input.nextDouble());
                 break;
             case '/':
-                System.out.println("Lütfen bolmek istediginiz sayilari sırasıyla giriniz : ");
-                double sayi1 = input.nextDouble();
-                double sayi2 = input.nextDouble();
-                if (sayi2 == 0){
+                System.out.println("Lütfen bolmek istediginiz 2 sayiyi giriniz");
+                double sayi1= input.nextDouble();
+                double sayi2= input.nextDouble();
+                if (sayi2==0){
                     System.out.println("∞");
                 }else {
-                    System.out.println("Sayıların bolumu : "+ sayi1/sayi2);//payda'nın 0 olma durumunu kontrol ediniz
+                    System.out.println("Sayilarin bolumu : "+sayi1/ sayi2);
                 }
-
                 break;
             case '%':
-                System.out.println("Lütfen modunu almak istediginiz sayilari sırasıyla giriniz : ");
-                System.out.println("Sayıların modu : "+input.nextDouble()% input.nextDouble());//payda'nın 0 olma durumunu kontrol ediniz
+                System.out.println("Lütfen birbirine bolumunden kalanı hesaplamak istediginiz 2 sayiyi giriniz");
+                System.out.println("Modu : "+input.nextDouble()%input.nextDouble());//aynı sekilde 2. sayının 0 olma durumunu kontrol ediniz
                 break;
+
             case '^':
                 System.out.println("Lütfen kuvvetini almak istediginiz sayilari giriniz : ");
                 sayi1=input.nextDouble();//taban
                 sayi2= input.nextDouble();//kuvvet
                 //System.out.println("Kuvvetleri : "+Math.pow(input.nextDouble(),input.nextDouble()));//bu for dongusu ile'de yapılabilir size odev!!!
-                double carpim=1;
+                double carp=1;
                 for (int i = 1; i <=sayi2 ; i++) {
-                    carpim*=sayi1;//carpim=carpim*sayi1;
+                    carp*=sayi1;//carpim=carpim*sayi1;
                 }
-                System.out.println("sonuc : "+carpim);
+                System.out.println("sonuc : "+carp);
+                break;
+            default:
+                System.out.println("Lütfen geçerli bir operator giriniz ☺");
                 break;
         }
+        System.out.println("Bizi tercih ettiginiz icin teşekkürler yine bekleriz ♥");
 
-        System.out.println("Bizi tercih ettiginiz icin tesekkürler ☻");
 
     }
 
