@@ -7,6 +7,7 @@ public class StaticBlock {
 
     //-------------------
     static { //static block
+        //static bloklar içinde yerel değişkenler tanımlanamaz ama deger atanir
         pi = 3.14;
         System.out.println("Static block 1");
     }
@@ -20,7 +21,7 @@ public class StaticBlock {
          Bu bloklar örneğin, veritabanı bağlantıları için kullanılır.
          Bu, uygulamanın herhangi bir bölümünde veritabanına erişim gerektiğinde bağlantının hızlı
          bir şekilde hazır olmasını sağlar.*/
-        
+
         System.out.println(pi);
         System.out.println("main method ici");
 
