@@ -63,7 +63,7 @@ public class Sb03 {
         //StringBuffer nasil olusturulur?
 
         StringBuffer sbf = new StringBuffer("Java");
-        System.out.println(sbf);
+        System.out.println(sbf); // Java
 
         /*
         1) StringBuffer Java’da String ureten bir diger classtir.
@@ -94,7 +94,7 @@ public class Sb03 {
          bu da veri kaybına veya tutarsızlığa sebep olabilir. Senkronizasyon mekanizması,
          bu tür sorunları önleyerek veri bütünlüğünü ve programın doğru çalışmasını sağlar.*/
 
-
+        // String her ikisinde de guvenle kullanilir thread safe dir.
 
 
     }
