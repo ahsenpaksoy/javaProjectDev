@@ -13,6 +13,9 @@ public class Student2 {
         ama non-static class member’lara ulasmak icin object olusturmak sarttir
     5) static variable’larin diger adi class variable’dir,
         non-static variable'larin diger adi instance variable veya object variable’dir
+
+        Static degiskenler degisebilir ve herkesi etkiler
+
      */
 
     public static String stdName = "Ali Can"; //static variable

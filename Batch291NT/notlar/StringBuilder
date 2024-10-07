@@ -15,3 +15,11 @@ not senkronized/not thread safe,fakat more efficient(daha etkili,ve hizli )
 String'lerde method kullanarak String'i degistirmek atama yapmadan mumkun degildir.
     Bunun iki sebebi vardir:
     1) Java pass-by-value kullanir 2) String Class'i immutable Class'dir.
+
+    StringBuilder ile StringBuffer Arasındaki Fark:
+    Senkronizasyon: StringBuffer senkronizedir ve thread-safe'dir, ancak StringBuilder senkronize değildir ve thread-safe değildir. Bu yüzden StringBuilder tek iş parçacıklı işlemler için daha hızlıdır.
+    Performans: Eğer uygulamanızda çoklu iş parçacığı (multi-threading) yoksa, StringBuilder, StringBuffer'dan daha hızlı çalışır.
+    Kullanım Alanları:
+    Birçok String birleştirme işlemi yapılması gereken durumlarda (örneğin, JSON veya XML yapılarını dinamik olarak oluştururken).
+    Döngü içinde yapılan string ekleme veya değiştirme işlemlerinde.
+    String manipülasyonu gerektiren oyun veya grafik uygulamalarında.
