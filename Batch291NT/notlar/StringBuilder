@@ -8,8 +8,10 @@ not senkronized/not thread safe,fakat more efficient(daha etkili,ve hizli )
 
 1) String Class'i immutable(Degistirilemez)dir. Java mutable Stringler uretebilmemiz icin  StringBuilder  class'i uretmistir.
 
-2) Java'da StringBuilder ile hemen hemen ayni isi yapan birde StringBuffer clasi vardir. "StringBuffer" Class'i StringBuilder Class'indan daha once uretilmistir.
-"StringBuffer" yavas calisan bir class'dir, "StringBuilder" ise hizli calisir. "StringBuffer"  "synchronize" islemlerini yapabilir, ama "StringBuilder" yapamaz.
+2) Java'da StringBuilder ile hemen hemen ayni isi yapan birde StringBuffer clasi vardir. "StringBuffer" Class'i StringBuilder
+Class'indan daha once uretilmistir.
+"StringBuffer" yavas calisan bir class'dir, "StringBuilder" ise hizli calisir. "StringBuffer"  "synchronize" islemlerini yapabilir,
+ama "StringBuilder" yapamaz.
 3) Ayni anda bir cok isin yapilmasina "multi threading" denir. "multi" = Cok, "thread"= Yapilan islerin herbiri
     Multi threading varsa, bu islerin siraya konulmasi lazim.Islerin siraya konulmasina "synchronization" denir.
 String'lerde method kullanarak String'i degistirmek atama yapmadan mumkun degildir.
@@ -17,9 +19,59 @@ String'lerde method kullanarak String'i degistirmek atama yapmadan mumkun degild
     1) Java pass-by-value kullanir 2) String Class'i immutable Class'dir.
 
     StringBuilder ile StringBuffer Arasındaki Fark:
-    Senkronizasyon: StringBuffer senkronizedir ve thread-safe'dir, ancak StringBuilder senkronize değildir ve thread-safe değildir. Bu yüzden StringBuilder tek iş parçacıklı işlemler için daha hızlıdır.
+    Senkronizasyon: StringBuffer senkronizedir ve thread-safe'dir, ancak StringBuilder senkronize değildir ve thread-safe değildir.
+     Bu yüzden StringBuilder tek iş parçacıklı işlemler için daha hızlıdır.
     Performans: Eğer uygulamanızda çoklu iş parçacığı (multi-threading) yoksa, StringBuilder, StringBuffer'dan daha hızlı çalışır.
     Kullanım Alanları:
     Birçok String birleştirme işlemi yapılması gereken durumlarda (örneğin, JSON veya XML yapılarını dinamik olarak oluştururken).
     Döngü içinde yapılan string ekleme veya değiştirme işlemlerinde.
     String manipülasyonu gerektiren oyun veya grafik uygulamalarında.
+
+
+    Java'da **`StringBuilder`** sınıfı, özellikle **performans** ve **bellek verimliliği** nedeniyle kullanılır.
+     Bunun nedeni, Java'daki `String` nesnelerinin **değişmez (immutable)** olmasıdır. Yani bir kez oluşturulduktan sonra bir
+     `String` nesnesi değiştirilemez. Bu durum, çok sayıda string işlemi yapıldığında performans kaybına ve gereksiz bellek kullanımına neden olabilir.
+    ### `String` ve `StringBuilder` Farkı:
+    1. **`String` nesneleri değişmezdir (immutable)**:
+       `String` ile her yeni ekleme, birleştirme veya değiştirme işlemi yapıldığında yeni bir `String` nesnesi oluşturulur. Bu süreç şu şekilde işler:
+       - Mevcut `String` birleştirilir veya değiştirilir.
+       - Yeni bir `String` nesnesi oluşturulur.
+       - Eski `String` nesnesi bellekte atıl durumda kalır (GC - Garbage Collection tarafından temizlenene kadar).
+       Bu durum, çok sayıda string manipülasyonu içeren döngüler veya işlemler yapıldığında, büyük miktarda gereksiz nesne oluşturulmasına ve
+       performans kaybına yol açar.
+    2. **`StringBuilder` değiştirilebilir (mutable) bir sınıftır**:
+       `StringBuilder`, oluşturulan bir string üzerinde değişiklik yapmaya olanak tanır, yani aynı nesne üzerinde işlemler yapılır. Yeni nesneler
+        oluşturulmaz. Bu da performansı artırır ve bellekteki yükü hafifletir.
+    ### `StringBuilder` Kullanımının Avantajları:
+    1. **Verimlilik**:
+       Çok sayıda string birleştirme veya değiştirme işlemi yapıyorsanız, `StringBuilder` bu işlemleri değişmez (immutable) nesneler üretmeden,
+        mevcut nesne üzerinde gerçekleştirir. Bu, daha az bellek kullanımına ve daha hızlı işlemlere olanak tanır.
+    2. **Daha Az Bellek Tüketimi**:
+       `StringBuilder`, büyüyen bir tampon (buffer) kullanarak string işlemlerini aynı bellek alanında tutar. Yeni nesneler oluşturulmadığı için
+       bellekte gereksiz yük oluşmaz.
+    3. **Daha Hızlı İşlem**:
+       `StringBuilder` ile yapılan string işlemleri, `String` kullanarak yapılan işlemlerden çok daha hızlıdır, çünkü her adımda yeni nesneler
+       yaratılmaz ve mevcut nesne üzerinde işlem yapılır.
+    ### Örnek:
+    ```java
+    // String ile birleştirme
+    String result = "";
+    for (int i = 0; i < 1000; i++) {
+        result += "test"; // Her adımda yeni bir String nesnesi oluşturuluyor.
+    }
+    // StringBuilder ile birleştirme
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < 1000; i++) {
+        sb.append("test"); // Aynı StringBuilder nesnesi üzerinde işlem yapılıyor.
+    }
+    String finalResult = sb.toString(); // Sonuç String'e dönüştürülüyor.
+    ```
+    Bu örnekte, `StringBuilder` kullanmak, özellikle döngüde çok sayıda string birleştirme işlemi yapıldığında daha verimli olur.
+    ### `StringBuffer` ile Farkı:
+    `StringBuilder`, `StringBuffer`'ın benzeri olsa da, **thread-safe** (çoklu iş parçacığı) değildir. Eğer kodunuzda birden fazla iş parçacığı
+    aynı string verisini değiştirmeye çalışmıyorsa, `StringBuilder` kullanmak daha performanslıdır. `StringBuffer` ise senkronizasyon sağlar ancak
+    bu, performans açısından bir miktar maliyetlidir.
+    ### Sonuç:
+    Java'da **`StringBuilder`**, özellikle string manipülasyonları için çok daha hızlı ve bellek açısından verimli bir çözüm sağlar.
+    `String` nesnelerinin değişmez doğasından kaynaklanan dezavantajları aşmak için tercih edilir ve bu nedenle sık sık, çok sayıda string
+    işlemi yapılması gereken durumlarda kullanılır.
