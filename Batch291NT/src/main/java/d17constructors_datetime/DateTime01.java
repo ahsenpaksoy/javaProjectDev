@@ -69,7 +69,7 @@ public class DateTime01 {
         //ornek 7: Specific bir tarih objesi nasil olusturulur?
         //of(int year, int month, int dayOfMonth): Belirtilen yıl, ay ve günle bir LocalDate örneği oluşturur.
 
-        LocalDate date1 = LocalDate.of(1984, 5, 7); // class ismiyle cagrildigi icin static tir
+        LocalDate date1 = LocalDate.of(1984, 5, 7); // OF() class ismiyle cagrildigi icin static tir
         LocalDate date2 = LocalDate.of(2010, 5, 4);
 
         System.out.println("date1 = " + date1 + ", date2 = " + date2);
