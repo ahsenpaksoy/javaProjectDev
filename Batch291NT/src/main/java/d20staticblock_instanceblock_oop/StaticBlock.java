@@ -48,6 +48,15 @@ public class StaticBlock {
         System.out.println(pi);
         System.out.println("main method ici");
 
+
+        /*
+
+        Bir Java sınıfında birden fazla static blok bulunursa, bunlar sınıf yüklendiğinde sırasıyla yukarıdan
+        aşağıya doğru yürütülür. Yani, sınıfın içindeki ilk static blok önce çalıştırılır, ardından sırayla diğer
+        static bloklar çalıştırılır.
+
+         */
+
     }
 
 }
