@@ -1,0 +1,12 @@
+
+Bir Java sınıfında birden fazla static blok bulunursa, bunlar sınıf yüklendiğinde sırasıyla yukarıdan aşağıya doğru yürütülür.
+Yani, sınıfın içindeki ilk static blok önce çalıştırılır, ardından sırayla diğer static bloklar çalıştırılır.
+
+
+Ne Zaman Instance Block Kullanılır?
+Eğer bir sınıf içinde birden fazla constructor varsa ve her constructor için aynı kodu yazmak istemiyorsanız, instance
+initializer block kullanabilirsiniz.
+Örneğin, bir sınıfın tüm constructor’ları çalıştırılmadan önce belirli bir işlemi her seferinde yapmak istiyorsanız,
+instance block daha uygundur.
+Ortak bir başlatma işlemi gerçekleştirilmesi gerektiğinde, her constructor’da aynı kodu yazmak yerine, bu kodu instance
+initializer block içine koyabilirsiniz.
