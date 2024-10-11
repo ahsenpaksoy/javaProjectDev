@@ -41,3 +41,88 @@
    Collections ==> Bir araya getirilmis parcalar anlamına gelir. ArrayList, Set, Map ler java collections sınıfı nesneleridir.
 
 */
+
+
+Java’da Array ve ArrayList
+1 Vote
+Array, aynı tipten çok sayıda değişken tanımlamak için kullanılır. Soyut bir veri yapısıdır. Java’da her sınıf aslında soyut bir veri tipidir. Java’da her veri tipinde array yaratılabilir. Dikkat edilmesi gereken nokta arrayın tipindeki değerleri arraya atamakdır. Java’da array ile çalışırken Array sınıfını kullanırız. Array sınıfı array yaratma, array’lerle işlem yapma, array içinde bileşen arama ve array’in bileşenlerini sıralama gibi array ile ilgili işlemleri yapmaya yarayan öğeleri içeren bir sınıftır.
+Array Yaratma üç adımda yapılır. Bunlar sırası ile;
+Birinci adım: Array sınıfının bildirimi
+int [] SeriNo;
+int tipinde SeriNo adlı bir array bildirimi yaptık. SeriNo, bu adımda null işaret eden bir referanstır.
+İkinci adım: Array sınıfından array nesnesini yaratma
+SeriNo = new int[3];
+kurucu deyimi bize SeriNo tarafından işaret edilen ana bellekte 3 tane int değer tutacak bir nesne yaratır. Bu adımda SeriNo nun 3 indeksinin de değeri de int tipi için varsayılan değer olarak 0 (sıfır)’dır. İndeks sırası 0 (sıfır)’dan başlarak n-1 tanedir. Bizim örneğimizde n = 3’dür. SeriNo nesnesinin değerlerine ulaşmak için SeriNo[0], SeriNo[1] ve SeriNo[2] kullanırız.
+Üçüncü adım: Array’in bileşenlerine değer atama
+Array’a değer atama en basit şekli ile aşağıdaki gibi yapılır.
+SeriNo[0] = 234;
+SeriNo[1] = 654;
+SeriNo[2] = 676;
+yukarıdaki adımları hepsini yada birkaçı toplu olarak yapanın yolu da vardır.
+üç adımı tek bir satırda yapmak için;
+int [] SeriNo = new int[] {234,654,676};
+yada ilk iki adımı tek bir satır da yapmak istenirse;
+int [] SeriNo = new int[];
+:bangbang:
+ArrayList, aynı tipteki verileri sıralı olarak tutan nesnelerdir. ArrayList'in 3 tane kurucusu vardır. ArrayListler üzerinde forach, iteratör ve indexler yardımıyla tutulan değer ile işlemler yapılabilir. Ne zaman ArrayList ne zaman array kullanılacağı konusunda ikileme düşülebilir. Sık sık değişmeyen ve sınırlı sayıda bir öğe ile çalışılacaksa, array seçmek mantıklı olur. Sık sık değişen ve öğe sayısı belirsiz ise ArrayList kullanmak akıllıca olur. Şunu da belirtmekte fayda var ArrayList nesnelerin depolanması için kullanılır, ilkel veri tipleri için array seçilmelidir. Bunun yanında ArrayList sınıfı List interface'nin metotlarını kullanılmasına izin verir. Buda kod yazan kişiye esneklik sağlar.
+:bangbang:
+Not: Java dilinin yaratıcısı SUN, generic tipler için <E> simgesinin kullanılmasını öneiryor. ArrayList<E> ifadesindeki E simgesi koleksiyon içindeki öğelerin veri tipi yerine geçer.
+1) Array()
+Boş bir dizi oluşturur. Başta 10 element saklayacak şekilde oluşturulur.
+2) ArrayList(Collection c)
+Parametrede belirtilen koleksiyona ait öğeler içeren bir liste oluşturur.
+3) ArrayList(int A)
+A değerinin belirtiği sayıda elemanı olan bir dizi oluşturur.
+ArrayList Metotları
+Öncelikle kendimize bir örnek ArrayList oluşturalım.
+ArrayList<String> stringList = new ArrayList<String>();
+sadece String tipindeki nesneleri saklayacak bir stringList isimli bir nesne oluşturduk.
+1) ArrayListe öğe ekleme
+stringList.add(“kalem”);
+yukarıdaki kod başarılı bir şekilde çalışır.
+stringList.add(new Integer(2));
+Yukarıdaki hata verir. Nedeni ise String tipindeki nesneye int tipinde öğe eklenmek istenmiştir. Doğrusu şu şekilde olacaktır.
+stringList.add(new String(‘2’));
+yada
+stringList.add(‘2’);
+yukarıdaki kodlar ile ArrayListe eklenen öğeler, ArrayListin sonuna eklenir. Eğer aradaki öğelerin yerine yeni öğeler eklenmek isteniyorsa şu kod kullanılır.
+stringList.add(3,’masa’);
+yukarıdaki kod 3. indeksin değerini ezerek masa değerini 3.öğeye atar. Eğer bir collection ArrayListe eklenmek istenirse
+stringList.addAll(Collection c);
+yada istenilen indeksten başlayıp eklemesi için
+stringList.addAll(3,Collection c);
+2) ArrayListeki öğeleri temizleme
+stringList.clear();
+3) ArrayListin kopyasını alma
+stringList.clone();
+4) ArrayList içinde öğe arama
+stringList.contains(‘masa’);
+öğe varsa true, yoksa false değerini döner.
+5) ArrayListten öğe okuma
+stringList.get(1);
+6) ArrayListe öğenin sırasını bulma
+stringList.IndexOf(‘masa’);
+Eğer öğe varsa kaçıncı indexte olduğunu verir. Yoksa -1 değerini geri döner.
+7) ArrayListin boş olup olmadığını kontrol etme
+stringList.isEmpty();
+Eğer ArrayList Boşsa true, değilse false değerini geri döner.
+8) ArrayListte öğrenin son indeksi bulma
+stringList.lastIndexOf(‘masa’);
+9) ArrayListten öğe silme
+stringList.remove(3);
+3.indexteki ögeyi ArrayListen kaldırır.
+10) ArrayListen belli bir aralıkla öğe silme
+stringList.removeRange(3,8);
+3. indeksten başlayarak 8. indekse kadar arada kalan öğeleri siler.
+11) ArrayListe öğe atama
+stringList.set(5,’bardak’);
+12) ArrayListe öğe sayısını bulma
+stringList.size();
+13) ArrayListen arraya dönüşüm yapma
+stringList.toArray();
+14) ArrayListte boş öğeleri silme
+stringList.trimToSize();
+
+
+
+

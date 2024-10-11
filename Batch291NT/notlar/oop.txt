@@ -1,0 +1,62 @@
+Inheritance (Miras Alma): Bir sınıfın diğer bir sınıftan özelliklerini ve metodlarını devralmasıdır.
+Override (Ezme): Bir subclass'ın, superclass'tan devraldığı bir metodu kendi ihtiyacına göre yeniden tanımlamasıdır.
+
+Java'da final anahtar kelimesi, bir sınıf, metod ya da değişkenin değiştirilmemesi gerektiğini belirtmek için kullanılır.
+Ancak overloading (aşırı yükleme) ile karıştırılmamalıdır. Overloading, bir sınıf içerisinde aynı isme sahip birden fazla
+metod tanımlamaktır, ancak bu metodlar farklı parametre imzalarına (parametre tipi, sayısı veya sırası) sahip olmalıdır.
+Java'da final anahtar kelimesi overloading'i engellemez. Yani, final bir metodun aşırı yüklenmiş (overloaded) versiyonlarını
+oluşturabilirsiniz. Ancak şunlara dikkat edilmelidir:
+final ve overloading: Aynı isimde farklı parametrelerle yeni metodlar tanımlayabilirsiniz. final bir metod, bu özelliği etkilemez.
+10:39
+public class MyClass {
+    public final void display() {
+        System.out.println("Final method");
+    }
+    // Overloading the final method
+    public void display(int number) {
+        System.out.println("Overloaded method with number: " + number);
+    }
+}
+10:39
+Bu örnekte display() metodu final olarak tanımlanmış ancak başka bir display(int) metodu da aşırı yükleme ile yazılabilmiştir.
+Bu tamamen geçerli bir işlemdir.
+Ancak, final metodlar override edilemez (yani alt sınıflarda yeniden tanımlanamaz).
+
+Java’da final anahtar kelimesi, overload (aynı isimli fakat farklı parametrelerle birden fazla metot tanımlama) işlemini engellemez.
+Java’da bir metodun final olarak tanımlanması, sadece bu metodun alt sınıflarda override edilemeyeceği anlamına gelir. Ancak overload,
+metot ismi aynı olup parametre listelerinin farklı olması durumudur, bu yüzden final ile herhangi bir çelişki oluşturmaz.
+
+
+//ODEV: encapsulation da private ile gizlenen bir veri baska package’dan set method ile degistirilebilir mi?
+
+Evet, eğer bir sınıfta tanımlı private bir alan (field) varsa, bu alana doğrudan erişim mümkün değildir.
+Ancak, sınıf içerisinde tanımlanmış bir public setter metodu varsa, bu setter metodu başka bir paketten bile çağrılarak
+o private alanın değeri değiştirilebilir.
+Yani, encapsulation prensipleri gereği alanlar private olsa bile, eğer bir public set metodu varsa, başka bir paketten
+bu metoda erişip private alanın değeri değiştirilebilir.
+
+private ile gizlenen bir veri, başka bir paketten doğrudan erişilemez. Ancak set metodu public olarak tanımlanmışsa,
+başka bir paketten bu veri set metodu aracılığıyla değiştirilebilir.
+Detaylı Açıklama:
+private erişim belirleyici, sadece aynı sınıf içinden erişime izin verir. Yani, doğrudan başka sınıflardan (veya başka
+paketlerden) bu verilere erişilemez.
+Encapsulation'da veriye erişimi kontrol etmek için, bu private özelliklere ulaşmanın tek yolu public getter ve setter metodları oluşturmaktır.
+Eğer set metodu public olarak tanımlandıysa, başka paketlerden bu metod aracılığıyla private veriler değiştirilebilir.
+Encapsulation (kapsülleme), yazılım geliştirmede çok sayıda avantaj sunsa da, bazı dezavantajları da olabilir. İşte kapsüllemenin dezavantajları:
+
+1. Kod Karmaşıklığı Artabilir
+Açıklama: Kapsülleme kullanmak, sınıf içindeki her veriye doğrudan erişim yerine getter ve setter metodları kullanmayı gerektirir.
+Bu da kodun gereksiz yere uzamasına ve karmaşıklığa yol açabilir.
+Örnek: Basit bir veri okuma ve yazma işlemi bile getter ve setter metodları ile yapılırken ekstra kod eklenmesi gerekir. Özellikle
+küçük ve basit projelerde bu, kodu gereksiz yere büyütebilir.
+
+
+
+
+
+
+
+
+
+
+
