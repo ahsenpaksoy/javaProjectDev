@@ -91,6 +91,12 @@ EN COK KULLANILAN REGEXLER:
                              6) Tum Noktalama Isaretleri Haric ==> \\p{Punct}
                              7) Tum Sesli Harfler Haric ==> [^aeiouAEIOU]
 
+                             Bu kisim da [] kullanilmaz. Buyuk harfler olumsuz anlama gelir
+                                         Sadece space karakteri : \\s
+                                         Space karakteri haric  : \\S
+                                         Sadece rakamlar        : \\d  (digit ten geliyor)
+                                         Rakamlar haric         : \\D
+
 11) replaceFirst () : replace () ile ayni isi yapmakkla birlikte ilk gordugu datayi degistirir.
 
 12) trim () : Bir String'de bastaki ve sondaki space karakterlerini siler, ortadaki
