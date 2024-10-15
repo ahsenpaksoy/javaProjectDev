@@ -62,5 +62,22 @@ public class Student {
     }
 
 //ODEV: encapsulation da private ile gizlenen bir veri baska package'dan set method ile degistirilebilir mi?
+    /*
+
+    Encapsulation'da private ile gizlenen bir veri başka bir sınıf veya paketten doğrudan erişilemez, ancak set method
+    (public olarak tanımlanmış bir setter) kullanılarak değiştirilebilir.
+
+    Private bir değişken, yalnızca tanımlandığı sınıf içerisinde erişilebilir.
+    Diğer sınıflar veya paketler, bu değişkene doğrudan erişemez. Ancak, encapsulation prensibi gereği, sınıfın içinde public
+     olarak tanımlanmış setter methodları varsa, bu methodlar aracılığıyla o değişkenin değeri dışarıdan değiştirilebilir.
+    Private bir değişkene doğrudan erişilemez. Ancak setAge() gibi public bir setter methodu kullanarak başka bir package'dan
+    bu veriyi değiştirebilirsiniz.
+    Bu sayede encapsulation prensibi korunmuş olur: Veriye doğrudan erişim engellenir, ancak kontrollü bir şekilde setter
+    methodları aracılığıyla veri değiştirilebilir.
+    Özetle:
+    Eğer sınıf içerisinde setter methodu varsa, private ile gizlenen veri başka bir package'dan dolaylı olarak, bu setter methodu
+    kullanılarak değiştirilebilir.
+
+     */
 
 }
