@@ -23,7 +23,7 @@ public class Maps01 {
         myMap.put("Ayse Kaya", 15);
         myMap.put("Fatma Yilmaz", 19);
         myMap.put("Ali Can", 25); //key tekrarli kullanildiginda son value aktif olur. Ustune yazar
-        System.out.println(myMap); //{Fatma Yilmaz=25, Ali Can=13, Veli Han=18, Ayse Kaya=15}
+        System.out.println(myMap); //{Fatma Yilmaz=25, Ali Can=13, Veli Han=18, Ayse Kaya=15}  - Map ciktisi suslu parantezde
 
         //Sadece 'key' degerlerini nasil alabiliriz?
         //keySet(): Map'teki tüm key'lerin bir set'ini döndürür.Set'in sırası rastgeledir.
@@ -93,7 +93,7 @@ public class Maps01 {
         int sum = 0;
 
         Set<Map.Entry<String, Integer>> mySet = people.entrySet();
-        System.out.println(mySet); //[Can=5, Ayse=2, Ali=3]
+        System.out.println(mySet); //[Can=5, Ayse=2, Ali=3]  // Set ciktisi koseli parantezde
 
         for (Map.Entry<String, Integer> w : mySet) {
             sum = sum + w.getKey().length() + w.getValue();
