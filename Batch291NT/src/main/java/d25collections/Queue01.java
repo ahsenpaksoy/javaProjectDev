@@ -32,6 +32,7 @@ public class Queue01 {
         //Queue nasil olusturulur?
 
         Queue<String> storage = new LinkedList<>();
+        // storage Queue nun methodlarini kullanir
 
         //Queue'ya nasil eleman eklenir?
         //1)add(): Belirtilen öğeyi kuyruğa ekler.
@@ -99,8 +100,22 @@ public class Queue01 {
         //Java'da deque'ler, Deque interface'iyle temsil edilir. Deque arabirimini uygulayan en yaygın class’lar
         // ArrayDeque ve LinkedList sınıflarıdır.
 
+        //Gündelik hayatta kullanılabilecek bazı Deque örnekleri:
+
+        //1) İnternet Tarayıcıları: İnternet tarayıcıları, kullanıcıların web sayfalarını gezdikçe
+        // birçok sayfayı bir araya getirir. Bu sayfaları tarayıcı geçmişi adı verilen bir veri
+        // yapısında saklar. Kullanıcılar geri ve ileri tuşlarına bastığında, bu geçmişteki sayfalar
+        // Deque mantığıyla işlenir. Kullanıcı son ziyaret ettiği sayfadan geri gitmek istediğinde
+        // veya ileri gitmek istediğinde Deque yapısı kullanılır.
+
+        //2) Geri Al/Yeniden Uygula: Çoğu yazılım uygulaması, kullanıcıların yaptıkları işlemleri geri
+        // almasına ve tekrar uygulamasına olanak tanır. Örneğin, metin düzenleyicilerde bir yazıyı
+        // yazdıktan sonra geri al (command + z) tuşuna bastığınızda, son yapılan işlem geri alınır.
+        // Bu işlemi uygulamak için bir Deque kullanabilirsiniz.
+
         //---------------Deque nasil olusturulur?
         Deque<String> d = new LinkedList<>();
+        //Deque<String> d = new ArrayDeque<>();
 
         //Deque’e nasil eleman eklenir?
         //1) add(): Belirtilen öğeyi ekler.
@@ -110,7 +125,7 @@ public class Queue01 {
         d.add("Ekrem");
         d.add("Oya");
         d.add("Tansu");
-        System.out.println(d); //[Mehmet, Mahmut, Ekrem, Oya, Tansu]
+        System.out.println(d); //[Mehmet, Mahmut, Ekrem, Oya, Tansu]  - insertion order
 
         //2) addFirst(E e): Deque'in başına bir öğe ekler. Dönüş türü void'dir çünkü
         // sadece eklemeyi gerçekleştirir ve değer döndürmez.
@@ -129,6 +144,7 @@ public class Queue01 {
         for (String w : d) {
             System.out.println(w);
         }
+
         System.out.println("---------------");
         //4)removeFirst(): Deque'nin başındaki öğeyi kaldırır ve kaldırılan öğeyi döndürür.
         // Bu method E türünde bir değer döndürür.(Burda String)
