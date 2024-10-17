@@ -79,6 +79,8 @@ public class Sets01 {
         ls.add(11);
         System.out.println(ls); //[14, 19, 17, 11]
 
+        //null’i eleman olarak kabul ederler
+
         //retainAll() metodu, bir koleksiyondaki öğelerin başka bir koleksiyonla kesişimini
         // (yani her iki koleksiyonda da bulunan öğeleri-ortak) bulmak için kullanılır.
 
