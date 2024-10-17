@@ -1,0 +1,178 @@
+
+1
+
+2
+
+3
+
+Collections (Koleksiyonlar) Genel Bilgi
+• Collections: Java'da Collections (Koleksiyonlar), nesneleri (Object'leri)
+depolamak ve işlemek için kullanılan sınıflar ve arayüzlerden oluşan bir kümedir.
+Verileri daha verimli bir şekilde yönetmek için çeşitli veri yapıları sağlar.
+Koleksiyonların sağladığı temel işlemler:
+o Ekleme: Bir koleksiyona yeni bir nesne eklemek için kullanılır.
+o Silme: Bir koleksiyondan nesne çıkarmak için kullanılır.
+o Arama: Bir koleksiyon içinde belirli bir nesneyi bulmak için kullanılır.
+o Döngüleme: Bir koleksiyonun tüm nesnelerini sırayla işlemek için
+kullanılır.
+• Java Collections Framework: Java programcılarının verileri verimli bir şekilde
+depolamasını, hızlı bir şekilde işlem yapmasını (örneğin verileri aramak,
+sıralamak, filtrelemek) ve güvenli bir şekilde depolamasını sağlar.
+
+Neden Koleksiyonlar, Dizilere (Arrays) Tercih Edildi?
+• Java’da array'lerin bazı sınırlamaları olduğu için Collections framework
+geliştirildi:
+o Boyutları Sabittir: Array'lerin boyutları sabittir, yani oluşturulduktan
+sonra dinamik olarak büyüyüp küçülemezler.
+o İç İçe Diziler Karmaşıktır: İç içe geçmiş array'ler karmaşık yapıdadır ve
+hataya daha açıktır.
+o Array'ler Genel Olarak Verimli Değildir: Ekleme, silme ve arama gibi
+işlemler array'lerde daha yavaştır.
+Collections, bu dezavantajları çözmek ve daha esnek bir veri depolama ve işleme
+yöntemi sunmak için tasarlanmıştır.
+
+LinkedList Nedir?
+• LinkedList: Bir bağlı listedir (linked list). LinkedList'lerde veriler düğüm (node)
+yapıları olarak depolanır ve her düğüm bir önceki ve bir sonraki düğümü işaret
+eder.
+o Erişim Yöntemi:
+▪ ArrayList'te, bir elemana doğrudan index üzerinden erişilebilir. Bu,
+veri erişimini hızlı yapar.
+▪ LinkedList'te ise bir elemana erişmek için, o elemana kadar
+düğümler arasında gezinmek gerekir. Bu, LinkedList'in veri
+erişiminde daha yavaş olmasına neden olabilir.
+o Bellek Kullanımı: Bağlantılar ve düğümler (node) nedeniyle, LinkedList
+genellikle ArrayList'e göre daha fazla bellek kullanır.
+• Özet:
+o LinkedList, eleman ekleme ve silme işlemlerinin hızlı olması gereken
+durumlarda tercih edilir.
+o ArrayList, elemanlara hızlı erişim gerektiren durumlarda daha uygundur.
+o Hangi veri yapısının kullanılacağı, uygulamanın gereksinimlerine ve
+yapılacak işlemlere bağlıdır.
+
+LinkedList'te Metotların Açıklamaları:
+• add(): Listeye eleman ekler. Örneğin, myList.add("Ali"); kodu, listeye "Ali"yi
+ekler.
+• add(int index, E element): Belirtilen konuma bir eleman ekler. Örneğin,
+myList.add(1, "Zeynep"); "Zeynep"i listenin 1. indeksine ekler.
+• addFirst(E e): Listenin başına eleman ekler.
+• addLast(E e): Listenin sonuna eleman ekler.
+• remove(Object o): Belirtilen öğeyi listeden kaldırır ve boolean döndürür.
+Örneğin, myList.remove("Ali"); "Ali"yi listeden çıkarır.
+• removeFirstOccurrence(Object o): Belirtilen öğeyi listenin başından itibaren
+arar ve ilk bulduğu yerde kaldırır.
+• removeLastOccurrence(Object o): Belirtilen öğeyi listenin sonundan itibaren
+arar ve ilk bulduğu yerde kaldırır.
+• peek(): Listenin ilk elemanını döndürür, ancak onu listeden kaldırmaz. Eğer liste
+boşsa, null döndürür.
+• poll(): Listenin ilk elemanını döndürür ve onu listeden kaldırır. Eğer liste boşsa,
+null döndürür.
+• element(): Listenin ilk elemanını döndürür ve onu listeden kaldırmaz. Eğer liste
+boşsa, NoSuchElementException fırlatır.
+• pop(): Listenin ilk elemanını döndürür ve onu listeden kaldırır. Eğer liste boşsa,
+NoSuchElementException fırlatır.
+Bu açıklamalar, Java'daki LinkedList ve Collection'lar ile ilgili temel bilgileri ve
+metotların ne işe yaradığını detaylandırır. Kod içerisinde verilen örnekler üzerinden bu
+metodların nasıl çalıştığını inceleyebilirsin.
+
+
+
+SETLER
+
+Setler Hakkında Genel Bilgi
+• Set: Setler, Java’da tekrarsız (unique) verileri depolamak için kullanılır. Örneğin, e-posta
+adresleri, TC kimlik numaraları, araba plakaları gibi veriler setlerde saklanabilir. Java'da
+üç tür set bulunur:
+o HashSet
+o LinkedHashSet
+o TreeSet
+
+1) HashSet
+• Tanım: HashSet, elemanları benzersiz hash kodları (kimlik numaraları) ile depolar.
+HashSet, en hızlı performansı sunar ancak eklenen elemanların sırasını korumaz.
+• Özellikleri:
+o Tekrarlı elemanlara izin vermez: Aynı elemandan birden fazla eklemeye
+çalışırsanız, sadece bir tanesini saklar.
+o null eleman kabul eder: Ancak, sadece bir tane null eklenebilir.
+o Sıra garantisi yoktur: Eklenen elemanların sıralaması karışıktır.
+• Örnek Kod:
+HashSet<String> hs = new HashSet<>();
+hs.add("Sinan");
+hs.add("Kerem");
+hs.add("Tuba");
+hs.add("Onur");
+hs.add(null);
+System.out.println(hs); // [Kerem, null, Sinan, Tuba, Onur]
+•
+o hs.add("Kerem"); işlemi, Kerem zaten set'te olduğu için ek bir değişiklik
+yapmaz.
+o hs.add(null); işlemi, null değerini set'e ekler.
+
+2) LinkedHashSet
+• Tanım: LinkedHashSet, elemanları eklenme sırasına göre (insertion order) depolar.
+LinkedHashSet, HashSet’in bir alt sınıfıdır ve sıralamayı koruma yeteneğine sahiptir.
+• Özellikleri:
+o Sıra garantisi: Elemanlar eklenme sırasına göre depolanır ve yazdırılır.
+o null eleman kabul eder.
+o HashSet’e göre performansı biraz daha yavaştır ancak sırayı korumak
+gerektiğinde kullanışlıdır.
+• Örnek Kod:
+LinkedHashSet<Integer> lhs = new LinkedHashSet<>();
+lhs.add(14);
+lhs.add(19);
+lhs.add(7);
+lhs.add(1);
+lhs.add(null);
+System.out.println(lhs); // [14, 19, 7, 1, null]
+retainAll() metodu, iki set arasındaki ortak elemanları bulur ve birinci set'te sadece bu ortak
+elemanları bırakır:
+lhs.retainAll(ls); // lhs ile ls arasındaki ortak elemanları korur.
+System.out.println(lhs); // [14, 19]
+
+3) TreeSet
+• Tanım: TreeSet, elemanları doğal sıraya (natural order) göre sıralar. Harfler için
+alfabetik, sayılar için artan sırada düzenler.
+• Özellikleri:
+o Sıra garantisi: Elemanlar otomatik olarak sıralanır (örneğin, A'dan Z'ye).
+o null değer kabul etmez: Null değer eklemeye çalışırsanız hata alırsınız çünkü
+doğal sıralama yapamaz.
+o SortedSet arayüzünü uygular, bu nedenle sıralı veri saklama için uygundur.
+o HashSet ve LinkedHashSet’e göre daha yavaş performans sunar.
+• Örnek Kod:
+TreeSet<Character> ts = new TreeSet<>();
+ts.add('G');
+ts.add('A');
+ts.add('Z');
+ts.add('R');
+ts.add('U');
+System.out.println(ts); // [A, G, R, U, Z]
+•
+• ts.add(null); işlemi hata verir çünkü TreeSet'ler null değerini kabul etmez.
+• subSet() metodu:
+• subSet() metodu, belirli bir aralıktaki elemanları içeren yeni bir SortedSet alt kümesi
+oluşturur.
+• ts.subSet('G', 'U') ifadesi, 'G' dahil ve 'U' hariç olan karakterlerden oluşan bir
+alt küme döndürür:
+SortedSet<Character> ss = ts.subSet('G', 'U');
+System.out.println(ss); // [G, R]
+Ek Bilgiler
+• HashCode: Java'da hash tabanlı veri yapılarında, elemanların eşsiz bir şekilde
+tanımlanması için hashCode() kullanılır. Aynı elemanlar aynı hash koduna sahip olabilir
+ama bu, mutlaka farklı elemanların farklı hash kodlarına sahip olacağı anlamına gelmez.
+String a = "Aliye canan";
+System.out.println(a.hashCode()); // Hash kodunu görüntüler.
+Özet
+• HashSet: Hızlı performans, sırasız depolama.
+• LinkedHashSet: Orta performans, ekleme sırasını korur.
+• TreeSet: Yavaş performans, doğal sıraya göre sıralama.
+Her set türü, farklı ihtiyaçlara yönelik çözümler sunar. Hangisini kullanacağınız, sıralama
+gereksinimlerinize ve performans beklentilerinize bağlıdır.
+
+
+
+
+
+
+
+
+
