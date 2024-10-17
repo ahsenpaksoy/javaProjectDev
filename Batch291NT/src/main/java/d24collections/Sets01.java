@@ -104,7 +104,7 @@ public class Sets01 {
         // oluşturur. Bu nedenle, subSet() yöntemini kullanmak için,
         // SortedSet türünden bir değişken oluşturmanız gerekir.
 
-        SortedSet<Character> ss = ts.subSet('G', 'U');
+        SortedSet<Character> ss = ts.subSet('G', 'U');  // SortedSet kullandıgınızda subSet ile karsilamak zorundasiniz
         System.out.println(ss); //[G, R]
 
     }
