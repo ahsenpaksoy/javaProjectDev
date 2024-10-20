@@ -44,6 +44,31 @@ public class Maps03 {
         //example 2: Write the code that shows how many times each letter in a given String is used in that String.
         //           “Hello” ==> H=1, e=1, l=2, o=1
 
+        String m = "Hello";
+        HashMap<String,Integer> a=new HashMap<>();
+        String[] harf= m.split("");
+
+        for (String w: harf){
+            Integer varMi= a.get(w);
+
+            if (varMi==null){
+                a.put(w,1);
+            }else {
+                a.put(w,varMi+1);
+            }
+        }
+        System.out.println(a);//{e=1, H=1, l=2, o=1}
+
+
+
+
+
 
     }
 }
+
+
+
+
+
+
