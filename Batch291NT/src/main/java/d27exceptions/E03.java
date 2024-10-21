@@ -19,7 +19,7 @@ public class E03 {
             System.out.println(ch);
         } catch (StringIndexOutOfBoundsException e) {
             System.err.println("olmayan index kullanmayiniz : " + e.getMessage()); //olmayan index kullanmayiniz : String index out of range: 4
-            e.printStackTrace(); //kod yazan hatayi gormek isterse yazar, exce[tion'i gosterir ama firlatmaz
+            e.printStackTrace(); //kod yazan hatayi gormek isterse yazar, exception'i gosterir ama firlatmaz . exeption ı gormek icin firlatiriz
         }
 
         System.out.println("App calisiyor");
