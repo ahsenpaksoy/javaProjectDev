@@ -51,6 +51,15 @@ public class E01 {
 
     }
 
+    /*
+
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at d27exceptions.Extra.division(Extra.java:11)  Hata olusan satir
+	at d27exceptions.Extra.main(Extra.java:6)   Hatanin sebebini verir
+
+ */
+
+
     //try-catch kullandiginizda sistem tarafindan "try" bolumu calistirilir,
     // eger "try" bolumunde hata ile karsilasilmazsa "catch" blogu hic calismaz
     //Eger "try" bolumunde hata ile karsilasilirsa hata alinan satirda calisma durdurulur
@@ -59,15 +68,17 @@ public class E01 {
     public static void division2(int a, int b) {
 
         try {
-            System.out.println(a / b);
+            System.out.println(a / b);   // Hata beklenen kod try icine yazilir
             System.out.println("try ici gorev tamamlandi");
-        } catch (ArithmeticException e) {
+        } catch (ArithmeticException e) {  //Exception turu yazilir
             System.out.println("Lutfen sifira bolme islemi yapmayiniz");
         }
 
         System.out.println("try catch sonrasi kod, akisina devam ediyor");
 
     }
+
+    // try da hata yoksa catch calismaz
 
     //Throw Exceptions : a/b gibi islem sirasinda degilde, istenmeyen durumu gorunce hatayi biz olusturalim
     public static void division3(int a, int b) {
