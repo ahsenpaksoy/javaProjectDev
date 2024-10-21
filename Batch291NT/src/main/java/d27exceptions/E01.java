@@ -79,6 +79,7 @@ Exception in thread "main" java.lang.ArithmeticException: / by zero
     }
 
     // try da hata yoksa catch calismaz
+    // try exeption firlatir catch bunu yakalar
 
     //Throw Exceptions : a/b gibi islem sirasinda degilde, istenmeyen durumu gorunce hatayi biz olusturalim
     public static void division3(int a, int b) {
