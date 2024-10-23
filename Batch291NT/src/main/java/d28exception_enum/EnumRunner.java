@@ -1,5 +1,8 @@
 package d28exception_enum;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class EnumRunner {
     public static void main(String[] args) {
 
@@ -17,6 +20,31 @@ public class EnumRunner {
         //3- Ankara’nin posta koduna ulasalim
         String postaKodu = Cities.ANKARA.getPostalCode();
         System.out.println(postaKodu);
+
+        //4- Antalya’nin plaka koduna ulasalim
+        System.out.println(Cities.ANTALYA.getPlateCode());
+
+        //5- Kullanicidan bir ilin plaka kodunu alarak bunun hangi il oldugunu console a yazdirin
+        //values() methodu enum icindeki tum datalari bir Array icinde bize verir
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Lutfen plaka kodunu giriniz");
+        int plaka = input.nextInt();
+
+        Cities[] sehirler = Cities.values();
+        //System.out.println(Arrays.toString(sehirler));
+
+        if (plaka < 1 || plaka > 81) {
+            System.out.println("Lutfen 1 ile 81 arasi bir plaka kodu giriniz");
+        } else {
+            for (Cities w : sehirler){
+                if(plaka == w.getPlateCode()){
+                    System.out.println("Girmis oldugunuz plaka " + w.getCityName() + " iline aittir");
+                    break;
+                }
+            }
+        }
+
 
     }
 }
