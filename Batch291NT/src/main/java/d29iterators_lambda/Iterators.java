@@ -34,9 +34,10 @@ public class Iterators {
 
         System.out.println(myList); //[Tom, Jim, Clara, Fatma, Mustafa]
 
+        //hasNext() pointer dan sonra eleman var mi diye kontrol eder
 
         //[Tom,     Jim,     Clara,     Fatma,     Mustafa]
-        Iterator<String> myItr = myList.iterator();
+        Iterator<String> myItr = myList.iterator();  // iteration olusturduk
 
 //        while (myItr.hasNext()) { //en basa konumlanan pointer'dan sonra eleman var mi diye bakar.
 //            myItr.next(); //pointer'i bir sonraki elemanin onune alir ve atladigi elemani verir
@@ -78,6 +79,7 @@ public class Iterators {
 
         //-------------------------
         //2)elemanlari sondan basa dogru yazdirin
+
         List<String> yourList2 = new ArrayList<>(Arrays.asList("Ali", "Can", "Aliye"));
         System.out.println(yourList2); //[Ali, Can, Aliye]
 
@@ -95,6 +97,9 @@ public class Iterators {
             String el = listItr2.previous(); //previous pointer'i sola dogru tasir
 
             System.out.println(el + "<--");
+
+            //hasPrevious pointer in soluna bakar
+            //listIterator() sagli sollu calisan methodlara sahip. Sagdan sola ve soldan saga calisan
 
         }
 
