@@ -44,21 +44,37 @@ public class Maps03 {
         //example 2: Write the code that shows how many times each letter in a given String is used in that String.
         //           “Hello” ==> H=1, e=1, l=2, o=1
 
-        String m = "Hello";
-        HashMap<String,Integer> a=new HashMap<>();
-        String[] harf= m.split("");
+        //1.yol
+        String str ="Hello";
+        str = str.toLowerCase();
+        String[] harf = str.split("");
+        System.out.println(Arrays.toString(harf));
+        HashMap<String, Integer> hm =new HashMap<>();
 
-        for (String w: harf){
-            Integer varMi= a.get(w);
-
-            if (varMi==null){
-                a.put(w,1);
+        for (String w : harf){
+            if (hm.get(w)==null){
+                hm.put(w,1);
             }else {
-                a.put(w,varMi+1);
+                hm.put(w,hm.get(w)+1);
             }
         }
-        System.out.println(a);//{e=1, H=1, l=2, o=1}
+        System.out.println(hm); //{e=1, h=1, l=2, o=1}
 
+//2.yol
+
+        String str2 ="Hello";
+        str2 = str2.toLowerCase();
+        HashMap<Character,Integer> hm2 = new HashMap<>();
+
+        for (int i = 0; i < str2.length() ; i++)
+        {
+            if(hm2.get(str2.charAt(i))==null){
+                hm2.put(str2.charAt(i),1);
+            }else {
+                hm2.put(str2.charAt(i),hm2.get(str2.charAt(i))+1);
+            }
+        }
+        System.out.println(hm2); //{e=1, h=1, l=2, o=1}
 
 
 
