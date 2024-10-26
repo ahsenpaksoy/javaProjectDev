@@ -37,9 +37,26 @@ public class C03_InterviewQuestion {
             sum+=num;
         }
         System.out.println("toplam : "+sum);
+
+
+        int minTerm=fibbonacciList.get(0);
+        int maxTerm=fibbonacciList.get(0);
+
+        for (int num:fibbonacciList
+        ) {
+            if (num>maxTerm){
+                maxTerm=num;
+            }
+            if (minTerm>num){
+                minTerm=num;
+            }
+
+        }
+
+        System.out.println("minTerm = " + minTerm);
+        System.out.println("maxTerm = " + maxTerm);
     }
 }
-
 
 
 
