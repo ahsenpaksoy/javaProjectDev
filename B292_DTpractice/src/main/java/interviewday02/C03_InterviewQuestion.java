@@ -47,7 +47,7 @@ public class C03_InterviewQuestion {
             if (num>maxTerm){
                 maxTerm=num;
             }
-            if (minTerm>num){
+            if (num<minTerm){
                 minTerm=num;
             }
 
