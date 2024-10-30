@@ -23,6 +23,8 @@ public class Lambda01 {
             Verilen dosya yolu dizgesini (string) temsil eden bir Path nesnesi döndürür.
             Bu Path nesnesi, dosya ve dizin işlemleri için kullanılır. (oralara ulasimi saglar)*/
 
+        // Files.lines(Paths.get("src/main/java/d32lambda/lambdaTextFile.txt")).forEach(System.out::println);
+
         Path path = Paths.get("src/main/java/d32lambda/lambdaTextFile.txt");
         Files.lines(path).forEach(System.out::println);
 
@@ -43,7 +45,7 @@ public class Lambda01 {
         //Eğer koşulu karşılayan bir eleman bulunursa true döndürür, aksi halde false döndürür.
 
         boolean result1 = Files.lines(path).anyMatch(t -> t.contains("Veli"));
-        System.out.println(result1);
+        System.out.println(result1); //false
 
         //---------------------------
         System.out.println("-------------");
