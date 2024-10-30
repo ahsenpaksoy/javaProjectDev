@@ -129,7 +129,7 @@ public class Lambda03 {
     public static void maksimum3(List<Integer> nums) {
 
         //sorted(): Koleksiyonu belirli bir kritere göre sıralar.(naturel order. kucukten buyuge)
-        Integer max = nums.stream().distinct().sorted().reduce((t, u) -> u).get();
+        Integer max = nums.stream().distinct().sorted().reduce((t, u) -> u).get(); // get() optional degeri int a cevirir
         System.out.println(max); //11
 
     }
