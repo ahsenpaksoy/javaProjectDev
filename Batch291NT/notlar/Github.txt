@@ -1,0 +1,86 @@
+public class GitHub
+{
+    /*
+    GITHUB- Terminal Komutlar
+
+    // 1. ADIM : Clonlama
+     GitHub - repo url adresini kobyala
+     Intelij - File -> Project from Versiyon Control -> url (yapıstır)
+
+
+
+    // 2. ADIM : Kendi branch ını oluşturup localinde çalışma
+
+     Terminal :
+                1 - git branch neslihan            -> istediğiniz isimlendirme ile kendi branch 'ını oluştur
+                2 - git branch                     -> hangi branch 'ta olduğunu kontrol et
+                3 - git checkout neslihan          -> kendi branch 'inde değilsen kendi branch'ine geçiş yap
+                4 - git branch                     -> kendi branch 'ine geçişi kontrol edebilirsin.
+
+                *** CALISMALARINIZ KENDİ BRANCH 'INIZDE YAPILACAKTIR ***
+
+    // 3. ADIM : Degisiklikleri commitleme ( !!! Hala kendi branch 'inizdesiniz.)
+
+                1 - git add .                      -> değişiklikleri ekle
+                2 - git commit -m"versiyonismi"    -> commit islemi
+                3 - git push                       -> değisiklikleri gönder (ilk push işleminde "--set-upstream origin.." verilen uzun kodu yapıştır)
+
+
+    // 4.ADIM : Team Lead merge yapıp bilgi verdikten sonra tekrar kendi lokaline çekip çalışma
+
+                1 - git checkout master            -> ana branch 'e geç
+                2 - git branch                     -> master 'a geçildimi kontrol et
+                3 - git pull                       -> ana branch 'ten çek
+                4 - git checkout neslihan          -> kendi branch'ine geç
+                5 - git merge master               -> birleştirme işlemi
+
+                *** CALISMAYA BASLAYABILIRSIINIZ ***
+     */
+
+
+
+     GitHub push-pull işlemleri adım adım takip edebilirsiniz: (üsttekinin aynısı küçük eklemeler var)
+
+
+     public class GitHub
+     {
+         /*
+         GITHUB- Terminal Komutlar
+
+         // 1. ADIM : Clonlama
+          GitHub - repo url adresini kobyala
+          Intelij - File -> Project from Versiyon Control -> url (yapıstır)
+
+
+
+         // 2. ADIM : Kendi branch ını oluşturup localinde çalışma
+
+          Terminal :
+                     1 - git branch neslihan            -> istediğiniz isimlendirme ile kendi branch 'ını oluştur
+                     2 - git branch                     -> hangi branch 'ta olduğunu kontrol et
+                     3 - git checkout neslihan          -> kendi branch 'inde değilsen kendi branch'ine geçiş yap
+                     4 - git branch                     -> kendi branch 'ine geçişi kontrol edebilirsin.
+
+                     * CALISMALARINIZ KENDİ BRANCH 'INIZDE YAPILACAKTIR *
+
+         // 3. ADIM : Degisiklikleri commitleme ( !!! Hala kendi branch 'inizdesiniz.)
+
+                     1 - git add .                      -> değişiklikleri ekle
+                     2 - git commit -m"versiyonismi"    -> commit islemi
+                     3 - git push                       -> değisiklikleri gönder (ilk push işleminde "--set-upstream origin.." verilen uzun kodu yapıştır)
+
+
+         // 4.ADIM : Team Lead merge yapıp bilgi verdikten sonra tekrar kendi lokaline çekip çalışma
+
+                     1 - git checkout master/main       -> ana branch 'e geç (ana branch ismi hangisi ise onu kullanın - git branch yazdığınızda ana branch ismini görürsünüz.)
+                     2 - git branch                     -> master 'a geçildimi kontrol et
+                     3 - git pull                       -> ana branch 'ten çek
+                     4 - git checkout neslihan          -> kendi branch'ine geç
+                     5 - git merge master/main          -> birleştirme işlemi
+
+                     * CALISMAYA BASLAYABILIRSIINIZ *
+          */
+     }
+
+
+}
